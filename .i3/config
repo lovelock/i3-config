@@ -127,8 +127,19 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec i3-msg exit
 
-bindcode 231 exec brightness 0
-bindcode 232 exec brightness 1
+# bindcode 231 exec brightness 0
+# bindcode 231 exec brightness 0
+
+# Fn+F5 to decrease volume
+# bindcode 122 exec xbacklight -inc 10
+# Fn+F6 to increase volume
+# bindcode 123 exec xbacklight -inc 10
+
+# Fn+F8 to decrease backlight
+bindcode 232 exec xbacklight -dec 10
+# Fn+F9 to increase backlight
+bindcode 233 exec xbacklight -inc 10
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
